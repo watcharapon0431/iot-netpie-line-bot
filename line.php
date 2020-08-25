@@ -56,7 +56,7 @@ curl_setopt_array($curl, array(
 	CURLOPT_TIMEOUT => 30,
 	CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 	CURLOPT_CUSTOMREQUEST => "POST",
-	CURLOPT_POSTFIELDS => "[    {      "paragraphs": [        {          "qas": [            {              "id": "1",              "question": ".$str_msg[1]."              }          ],          "context": "ราคาทองคำวันนี้ 248,800 บาท"        }      ]    }]",
+	CURLOPT_POSTFIELDS => "[    {      "paragraphs": [        {          "qas": [            {              "id": "1",              "question": "ราคาทอง"              }          ],          "context": "ราคาทองคำวันนี้ 248,800 บาท"        }      ]    }]",
 	CURLOPT_HTTPHEADER => array(
 		"accept: application/json",
 		"content-type: application/json",
