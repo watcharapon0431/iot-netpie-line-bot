@@ -60,7 +60,7 @@ if ( sizeof($request_array['events']) > 0 )
 	   }
 	   
 	   if($text =="@บอท ขอรายชื่อนิสิตที่ส่งงาน LineBoT"){
-	    	  $url = 'https://linebot.kantit.com/stuid.php';
+	    	  $url = 'https://linebot.kantit.com/list.php';
 		   $ch = curl_init($url);
 		   curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
 		   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -70,7 +70,7 @@ if ( sizeof($request_array['events']) > 0 )
 		   $result = curl_exec($ch);
 		   curl_close($ch);   		   
 		   $obj = json_decode($result);		   
-		   $reply_message = "โปรดรอสักครู่...";
+		   $reply_message = $result;
 		   //$reply_message = 'ผลการบันทึกข้อมูล'. $obj->{'status'} .' และ '.$obj->{'data'} . ' OK!';
 	   }
 	   
