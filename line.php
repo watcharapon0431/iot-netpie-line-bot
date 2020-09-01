@@ -60,10 +60,14 @@ if ( sizeof($request_array['events']) > 0 )
 	   }
 	   
 	   if($text =="@บอท ขอรายชื่อนิสิตที่ส่งงาน LineBoT"){
-	    	  $url = 'https://linebot.kantit.com/list.php';
-		   $result = file_get_contents($url);		   
-		   $obj = json_decode($result);
-		   $reply_message = 'มีส่งงาน '. $obj->{'Confirmed'} .' คน ได้แก่...';
+	    	   $url = 'https://linebot.kantit.com/list.php';
+		   $reply_message = file_get_contents($url);   // Get request content
+		   
+		   //$request_array = json_decode($request, true);   // Decode JSON to Array
+		   
+		   //$result = file_get_contents($url);		   
+		   //$obj = json_decode($result);
+		   //$reply_message = 'มีส่งงาน '. $obj->{'Confirmed'} .' คน ได้แก่...';
 		   //$reply_message = 'ติดเชื้อสะสม '. $obj->{'Confirmed'} .' คน รักษาหายแล้ว '.$obj->{'Recovered'} . ' คน';
 		   
 	   }
