@@ -68,8 +68,11 @@ if ( sizeof($request_array['events']) > 0 )
 		   curl_setopt($ch, CURLOPT_POSTFIELDS, $post_body);
 		   curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 		   $result = curl_exec($ch);
-		   curl_close($ch);   		   	   
+		   curl_close($ch); 
+		   $obj = json_decode($result);		   
 		   $reply_message = $result;
+		   //$reply_message = 'ติดเชื้อสะสม '. $obj->{'Confirmed'} .' คน รักษาหายแล้ว '.$obj->{'Recovered'} . ' คน';
+		   
 	   }
 	   
 		//$reply_message = '('.$text.') ได้รับข้อความเรียบร้อย!!';   
