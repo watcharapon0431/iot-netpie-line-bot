@@ -69,9 +69,8 @@ if ( sizeof($request_array['events']) > 0 )
 		   curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 		   $result = curl_exec($ch);
 		   curl_close($ch); 
-		   $obj = json_decode($result);		   
-		   $reply_message = $result;
-		   //$reply_message = 'ติดเชื้อสะสม '. $obj->{'Confirmed'} .' คน รักษาหายแล้ว '.$obj->{'Recovered'} . ' คน';
+		   $obj = json_decode($result);
+		   $reply_message = 'มีส่งงาน '. $obj->{'count'} .' คน ได้แก่...';
 		   
 	   }
 	   
