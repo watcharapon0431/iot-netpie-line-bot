@@ -60,7 +60,7 @@ if ( sizeof($request_array['events']) > 0 )
 	   }
 	   
 	   if($text =="@บอท ขอรายชื่อนิสิตที่ส่งงาน LineBoT"){
-	    	  $url = 'https://linebot.kantit.com/list.php';
+	    	  $url = 'https://covid19.th-stat.com/api/open/today';
 		   $ch = curl_init($url);
 		   curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
 		   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -70,7 +70,8 @@ if ( sizeof($request_array['events']) > 0 )
 		   $result = curl_exec($ch);
 		   curl_close($ch); 
 		   $obj = json_decode($result);
-		   $reply_message = 'มีส่งงาน '. $obj->{'count'} .' คน ได้แก่...';
+		   $reply_message = 'มีส่งงาน '. $obj->{'Confirmed'} .' คน ได้แก่...';
+		   //$reply_message = 'ติดเชื้อสะสม '. $obj->{'Confirmed'} .' คน รักษาหายแล้ว '.$obj->{'Recovered'} . ' คน';
 		   
 	   }
 	   
