@@ -68,10 +68,8 @@ if ( sizeof($request_array['events']) > 0 )
 		   curl_setopt($ch, CURLOPT_POSTFIELDS, $post_body);
 		   curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 		   $result = curl_exec($ch);
-		   curl_close($ch);   		   
-		   $obj = json_decode($result);		   
+		   curl_close($ch);   		   	   
 		   $reply_message = $result;
-		   //$reply_message = 'ผลการบันทึกข้อมูล'. $obj->{'status'} .' และ '.$obj->{'data'} . ' OK!';
 	   }
 	   
 		//$reply_message = '('.$text.') ได้รับข้อความเรียบร้อย!!';   
