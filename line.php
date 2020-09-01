@@ -55,8 +55,8 @@ if ( sizeof($request_array['events']) > 0 )
 		   $result = curl_exec($ch);
 		   curl_close($ch);   		   
 		   $obj = json_decode($result);		   
-		   //$reply_message = $result;
-		   $reply_message = 'ผลการบันทึกข้อมูล'. $obj->{'status'} .' และ '.$obj->{'data'} . ' OK!';
+		   $reply_message = $result;
+		   //$reply_message = 'ผลการบันทึกข้อมูล'. $obj->{'status'} .' และ '.$obj->{'data'} . ' OK!';
 	   }
 	   
 		//$reply_message = '('.$text.') ได้รับข้อความเรียบร้อย!!';   
