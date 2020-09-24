@@ -73,6 +73,14 @@ if ( sizeof($request_array['events']) > 0 )
 		   $reply_message = "โปรดรอสักครู่....";
 	   }
 	   
+	     if($text =="@บอท ขอที่อยู่มทร.หน่อยจิ"){
+	    	   $url = 'https://www.google.com/maps/place/Phra+Nakhon+Si+Ayutthaya/@14.3935691,100.237786,10z/data=!3m1!4b1!4m8!1m2!2m1!1smaps+google!3m4!1s0x30e2736f5bfd8f7f:0x1019237450c4860!8m2!3d14.3532128!4d100.5689599';
+		   
+		   $reply_message = $url;   // Get request content
+
+		   //$reply_message = $reply_message;
+	   }
+	   
 		//$reply_message = '('.$text.') ได้รับข้อความเรียบร้อย!!';   
    }
    else
