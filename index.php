@@ -1,2 +1,2 @@
 <?php
-echo "LINEBOT by KANT";
+echo "LINEBoT API by KANT";
