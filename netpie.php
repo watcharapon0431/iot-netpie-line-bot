@@ -4,21 +4,12 @@
 		$KEY = "RY1yuFxqaJOqqGg"; //enter your web key
 		$SECRET = "8iAcnJfGMQeZ0fom44Vk9LzOp"; //enter your secret
 		$Topic = "$topic";
-		if($msg =="on"){
+		if($msg =="on" || $msg =="เปิดไฟ" || $msg =="เปิดไฟ สิบอท!!"){
 			$msg = "1";
 		}
-		else if($msg =="off"){
+		else if($msg =="off" || $msg =="ปิดไฟ" || $msg =="ปิดไฟ สิบอท!!"){
 			$msg = "0";
-		}
-		else if($msg =="เปิดไฟ"){
-			$msg = "1";
-		}
-		else if($msg =="ปิดไฟ"){
-			$msg = "0";
-		}
-		else if($msg =="56"){
-			$msg = "1";
-		}
+		}		
 		else{
 			//
 		}
