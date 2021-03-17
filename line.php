@@ -38,12 +38,13 @@ if ( sizeof($request_array['events']) > 0 )
 // 		   curl_close($ch);   
 		   
 // 		   $obj = json_decode($result);
-		   $obj = json_decode($url);
+		   $json = file_get_contents($url);
+		   $obj = json_decode($json);
 		   
 		   //$reply_message = $result;
 		   //$reply_message = 'ติดเชื้อสะสมโว้ยยย!!! '. $obj->{'Confirmed'} .' คน รักษาหายแล้ว '.$obj->{'Recovered'} . ' คน';
-		   $reply_message = 'ติดเชื้อสะสมโว้ยยย!!! '. $obj->{'Confirmed'} .' คน เสียชีวิต '.$obj->{'Deaths'} . ' คน' .' คน รักษาหายแล้ว '.$obj->{'Recovered'} . ' คน';
-// 		   $reply_message = 'ติดเชื้อสะสมโว้ยยย!!! '. $obj->Confirmed .' คน เสียชีวิต '.$obj->Deaths . ' คน' .' คน รักษาหายแล้ว '.$obj->Recovered . ' คน';
+// 		   $reply_message = 'ติดเชื้อสะสมโว้ยยย!!! '. $obj->{'Confirmed'} .' คน เสียชีวิต '.$obj->{'Deaths'} . ' คน' .' คน รักษาหายแล้ว '.$obj->{'Recovered'} . ' คน';
+		   $reply_message = 'ติดเชื้อสะสมโว้ยยย!!! '. $obj->Confirmed .' คน เสียชีวิต '.$obj->Deaths . ' คน' .' คน รักษาหายแล้ว '.$obj->Recovered . ' คน';
 		   //$reply_message = 'ติดเชื้อสะสมโว้ยยย!!! ';
 	
 	        }	
