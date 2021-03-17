@@ -23,7 +23,7 @@ if ( sizeof($request_array['events']) > 0 )
 		$text = $event['message']['text'];
 		
 	   	if($text == "ชื่อ" || $text == "ชื่ออะไร" || $text == "ชื่ออะไรครับ"|| $text == "ชื่ออะไรคะ"){
-			$reply_message = 'ชื่อของฉันคือ BOTCAT';
+			$reply_message = 'ชื่อของฉันคือ BOTCAT ครับ';
 		}
 	   
 	   	if($text == "สถานการณ์โควิดวันนี้" || $text == "covid19" || $text == "covid-19" || $text == "Covid-19"){
@@ -42,7 +42,8 @@ if ( sizeof($request_array['events']) > 0 )
 		   
 		   //$reply_message = $result;
 		   //$reply_message = 'ติดเชื้อสะสมโว้ยยย!!! '. $obj->{'Confirmed'} .' คน รักษาหายแล้ว '.$obj->{'Recovered'} . ' คน';
-		   $reply_message = 'ติดเชื้อสะสมโว้ยยย!!! '. $obj->{'Confirmed'} .' คน เสียชีวิต '.$obj->{'Deaths'} . ' คน' .' คน รักษาหายแล้ว '.$obj->{'Recovered'} . ' คน';
+		   //$reply_message = 'ติดเชื้อสะสมโว้ยยย!!! '. $obj->{'Confirmed'} .' คน เสียชีวิต '.$obj->{'Deaths'} . ' คน' .' คน รักษาหายแล้ว '.$obj->{'Recovered'} . ' คน';
+		   $reply_message = 'ติดเชื้อสะสมโว้ยยย!!! ';
 	
 	        }	
 	   
